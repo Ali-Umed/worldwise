@@ -1,7 +1,7 @@
-import { Outlet } from 'react-router-dom';
-import AppNav from './AppNav';
-import Logo from './Logo';
-import styles from './Sidebar.module.css';
+import { Outlet } from "react-router-dom";
+import AppNav from "./AppNav";
+import Logo from "./Logo";
+import styles from "./Sidebar.module.css";
 
 function Sidebar() {
   return (
@@ -11,7 +11,7 @@ function Sidebar() {
       <Outlet />
       <footer className={styles.footer}>
         <p className={styles.copyright}>
-          &copy; copyright {new Date().getFullYear} by WorldWise Inc
+          &copy; copyright {new Date().getFullYear} by KurdWanderer Inc
         </p>
       </footer>
     </div>
