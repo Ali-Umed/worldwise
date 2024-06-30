@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
+import citiesData from "../../../final/data/cities.json";
 import {
   createContext,
   useEffect,
@@ -92,9 +94,9 @@ function CitiesProvider({ children }) {
       dispatch({ type: "loading" });
 
       try {
-        const res = await fetch(`${BASE_URL}/cities`);
-        const data = await res.json();
-        dispatch({ type: "cities/loaded", payload: data });
+        // const res = await fetch(`${BASE_URL}/cities`);
+        // const data = await res.json(); // make it work in server
+        dispatch({ type: "cities/loaded", payload: citiesData.cities });
       } catch {
         dispatch({
           type: "rejected",
