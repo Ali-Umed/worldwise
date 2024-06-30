@@ -1,7 +1,16 @@
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { useCities } from "../contexts/CitiesContext";
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import styles from "./CityItem.module.css";
+import { Link } from "react-router-dom";
+
+const flagemojiToPNG = (flag) => {
+  var countryCode = Array.from(flag, (codeUnit) => codeUnit.codePointAt())
+    .map((char) => String.fromCharCode(char - 127397).toLowerCase())
+    .join("");
+  return (
+    <img src={`https://flagcdn.com/24x18/${countryCode}.png`} alt="flag" />
+  );
+};
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -10,58 +19,7 @@ const formatDate = (date) =>
     year: "numeric",
   }).format(new Date(date));
 
-function CityItem({ city }) {
-  const { currentCity, deleteCity } = useCities();
-  const { cityName, emoji, date, id, position } = city;
-
-  function handleClick(e) {
-    e.preventDefault();
-    deleteCity(id);
-  }
-
-  return (
-    <li>
-      <Link
-        className={`${styles.cityItem} ${
-          id === currentCity.id ? styles["cityItem--active"] : ""
-        }`}
-        to={`${id}?lat=${position.lat}&lng=${position.lng}`}
-      >
-        <span className={styles.emoji}>{emoji}</span>
-        <h3 className={styles.name}>{cityName}</h3>
-        <time className={styles.date}>({formatDate(date)})</time>
-        <button className={styles.deleteBtn} onClick={handleClick}>
-          &times;
-        </button>
-      </Link>
-    </li>
-  );
-}
-
-export default CityItem;
-=======
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-import styles from './CityItem.module.css';
-import { Link } from 'react-router-dom';
-
-const flagemojiToPNG = flag => {
-  var countryCode = Array.from(flag, codeUnit => codeUnit.codePointAt())
-    .map(char => String.fromCharCode(char - 127397).toLowerCase())
-    .join('');
-  return (
-    <img src={`https://flagcdn.com/24x18/${countryCode}.png`} alt="flag" />
-  );
-};
-
-const formatDate = date =>
-  new Intl.DateTimeFormat('en', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  }).format(new Date(date));
-
-function CityItem({ city }) {
+export default function CityItem({ city }) {
   const { cityName, emoji, date, id, position } = city;
   return (
     <li>
@@ -81,6 +39,3 @@ function CityItem({ city }) {
     </li>
   );
 }
-
-export default CityItem;
->>>>>>> 8db943725b5ac4d337ba1f73294ee385d05f8df1

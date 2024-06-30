@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
@@ -27,25 +26,12 @@ export default function Login() {
     },
     [isAuthenticated, navigate]
   );
-=======
-import { useState } from "react";
-import styles from "./Login.module.css";
-import PageNav from "../components/PageNav";
-
-export default function Login() {
-  const [email, setEmail] = useState("jack@example.com");
-  const [password, setPassword] = useState("qwerty");
->>>>>>> 8db943725b5ac4d337ba1f73294ee385d05f8df1
 
   return (
     <main className={styles.login}>
       <PageNav />
-<<<<<<< HEAD
 
       <form className={styles.form} onSubmit={handleSubmit}>
-=======
-      <form className={styles.form}>
->>>>>>> 8db943725b5ac4d337ba1f73294ee385d05f8df1
         <div className={styles.row}>
           <label htmlFor="email">Email address</label>
           <input
@@ -67,11 +53,7 @@ export default function Login() {
         </div>
 
         <div>
-<<<<<<< HEAD
           <Button type="primary">Login</Button>
-=======
-          <button>Login</button>
->>>>>>> 8db943725b5ac4d337ba1f73294ee385d05f8df1
         </div>
       </form>
     </main>
