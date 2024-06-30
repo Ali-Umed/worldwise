@@ -1,25 +1,25 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import styles from './CityItem.module.css';
-import { Link } from 'react-router-dom';
+import styles from "./CityItem.module.css";
+import { Link } from "react-router-dom";
 
-const flagemojiToPNG = flag => {
-  var countryCode = Array.from(flag, codeUnit => codeUnit.codePointAt())
-    .map(char => String.fromCharCode(char - 127397).toLowerCase())
-    .join('');
+const flagemojiToPNG = (flag) => {
+  var countryCode = Array.from(flag, (codeUnit) => codeUnit.codePointAt())
+    .map((char) => String.fromCharCode(char - 127397).toLowerCase())
+    .join("");
   return (
     <img src={`https://flagcdn.com/24x18/${countryCode}.png`} alt="flag" />
   );
 };
 
-const formatDate = date =>
-  new Intl.DateTimeFormat('en', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
+const formatDate = (date) =>
+  new Intl.DateTimeFormat("en", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
   }).format(new Date(date));
 
-function CityItem({ city }) {
+export default function CityItem({ city }) {
   const { cityName, emoji, date, id, position } = city;
   return (
     <li>
@@ -39,5 +39,3 @@ function CityItem({ city }) {
     </li>
   );
 }
-
-export default CityItem;

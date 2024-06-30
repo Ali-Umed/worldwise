@@ -8,10 +8,12 @@ function Sidebar() {
     <div className={styles.sidebar}>
       <Logo />
       <AppNav />
+
       <Outlet />
+
       <footer className={styles.footer}>
         <p className={styles.copyright}>
-          &copy; copyright {new Date().getFullYear} by KurdWanderer Inc
+          &copy; Copyright {new Date().getFullYear()} by KurdWanderer Inc.
         </p>
       </footer>
     </div>

@@ -1,18 +1,6 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
       "cityName": "Madrid",
       "country": "Spain",
       "emoji": "🇪🇸",
@@ -35,6 +23,30 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "cityName": "Nijar",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-04-03T07:47:59.202Z",
+      "notes": "",
+      "position": {
+        "lat": "36.967508314568164",
+        "lng": "-2.13128394200588"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Muḩ Ḩasan",
+      "country": "Syrian Arab Republic (the)",
+      "emoji": "🇸🇾",
+      "date": "2024-06-30T23:01:02.350Z",
+      "notes": "",
+      "position": {
+        "lat": "34.939985151560435",
+        "lng": "39.79248046875001"
+      },
+      "id": 98443199
     }
   ]
 }
