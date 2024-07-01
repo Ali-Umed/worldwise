@@ -2,6 +2,7 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 import citiesData from "../../../final/data/cities.json";
+
 import {
   createContext,
   useEffect,
@@ -168,15 +169,15 @@ function CitiesProvider({ children }) {
     dispatch({ type: "loading" });
 
     try {
-      const res = await fetch(`${BASE_URL}/cities`, {
-        method: "POST",
-        body: JSON.stringify(newCity),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      const data = await res.json();
-      dispatch({ type: "city/created", payload: data });
+      // const res = await fetch(`${BASE_URL}/cities`, {
+      //   method: "POST",
+      //   body: JSON.stringify(newCity),
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      // });
+      // const data = await res.json();
+      dispatch({ type: "city/created", payload: newCity });
     } catch {
       dispatch({
         type: "rejected",
