@@ -27,11 +27,7 @@ To get started with Kurdwanderer, follow these steps:
     cd kurdwanderer
 
 3. Install the dependencies:
-    npm install
-     # or
-    yarn install
+    npm install or yarn install
 
 4. Start the development server:
-    npm start
-    # or
-    yarn start
+    npm start or yarn start
